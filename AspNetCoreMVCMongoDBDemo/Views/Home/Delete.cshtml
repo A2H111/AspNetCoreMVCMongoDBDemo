@@ -1,0 +1,18 @@
+﻿@model AspNetCoreMVCMongoDBDemo.Models.Customer
+@{
+	Layout = "_Layout";
+}
+<h4>Delete Customer</h4>
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Delete">
+			<label class="control-label">Are you sure to delete </label> <input asp-for="CustomerId" class="form-control" readonly />
+			<div class="form-group">
+				<input type="submit" value="Delete" class="btn btn-default" />
+			</div>
+		</form>
+	</div>
+</div>
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>

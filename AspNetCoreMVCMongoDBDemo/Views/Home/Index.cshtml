@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AspNetCoreMVCMongoDBDemo.Models.Customer>
+@{
+	ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+<p>
+	<a asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered" style="width:600px">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.CustomerId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.CustomerName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Address)
+			</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.CustomerId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.CustomerName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Address)
+				</td>
+				<td>
+					@Html.ActionLink("Edit", "Edit", new { id = item.CustomerId }) |
+					@Html.ActionLink("Details", "Details", new { id = item.CustomerId }) |
+					@Html.ActionLink("Delete", "Delete", new { id = item.CustomerId })
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

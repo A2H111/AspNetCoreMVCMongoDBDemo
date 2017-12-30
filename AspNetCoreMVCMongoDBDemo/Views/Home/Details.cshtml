@@ -1,0 +1,32 @@
+﻿@model AspNetCoreMVCMongoDBDemo.Models.Customer
+@{
+	ViewData["Title"] = "Details";
+}
+<div>
+	<h4>Customer Details</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.CustomerId)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.CustomerId)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.CustomerName)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.CustomerName)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Address)
+		</dt>
+		<dd>
+			@Html.DisplayFor(model => model.Address)
+		</dd>
+	</dl>
+</div>
+<div>
+
+	<a asp-action="Index">Back to List</a>
+</div>
